@@ -1,0 +1,70 @@
+@import './mixIns';
+
+
+// footer section
+footer{
+    width: 100%; height: auto;
+    @include flexBox(center,center,column);
+    margin: 1rem 0rem;
+    position: sticky;
+    bottom: 0;
+    .fsection{
+        width: 100%;
+        @include flexBox(space-around,center,row);
+        margin: 1.5rem 0rem;
+        h1{
+            font-size: 1.5rem;
+        }
+        a{
+            color: rgba(0, 0, 0, 0.712);
+        }
+
+    }
+    .upper-section{
+        ul{
+            @include flexBox(space-evenly,center,row);
+        width: 100%;            
+            li,a{
+                &:hover{
+                    color: $hover;
+                }
+            }
+        }
+    }
+    .lower-section{    
+        i{
+            pointer-events: none;
+        }   
+         ul{
+            @include flexBox(center,center,row);        
+        li{
+            border-right: 1px solid rgba(0, 0, 0, 0.329);
+            padding: 0rem 1rem;
+        }
+    }
+    }
+}
+
+
+
+
+
+
+
+
+@media (min-width: 240px) and (max-width: 480px){
+    // footer section
+footer{
+    .fsection{
+        @include flexBox(space-around,center,column);
+        gap: 1.5rem;
+    }
+    .upper-section{
+        ul{
+            @include flexBox(space-evenly,center,column);
+            gap: 2.4rem;
+        }
+    }
+
+}
+}

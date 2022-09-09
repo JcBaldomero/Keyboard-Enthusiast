@@ -1,0 +1,88 @@
+// MixIns
+@mixin flexBox($justify, $align, $direction){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+@mixin linkHover {
+    transition: .3s linear;
+}
+
+
+
+
+
+// Variables
+// colors
+$primary:rgb(149, 140, 131);
+$secondary:rgb(217, 208, 175);
+$textColor:hsl(31, 100%, 96%);
+$hover:hsl(2, 65%, 91%);
+
+
+// Fonts
+$text : 'Quicksand', sans-serif;
+$regular: 400;
+$sbold:600;
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    list-style:none;    
+    max-width: 2120px;
+  }
+body {
+    position: relative;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    font-family: 'Montserrat', sans-serif;
+
+  }
+  main {
+    position: relative;
+    background-color: white;
+    z-index: 99;
+    overflow: hidden;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  a,button,i{
+    cursor: pointer;
+    &:hover{
+      color: $hover;
+  }
+  }
+p{
+  font-family: $text;
+  font-size: 1.3rem;
+}
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  h4 {
+    font-size: 0.875rem;
+  }
+  ul{
+    li{
+        font-family: $text;
+        font-size: 1.2rem;
+    }
+}
+  @media (min-width: 240px) and (max-width: 480px){
+
+  }

@@ -1,0 +1,753 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none;
+  max-width: 2120px;
+}
+
+body {
+  position: relative;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  position: relative;
+  background-color: white;
+  z-index: 99;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+a, button, i {
+  cursor: pointer;
+}
+a:hover, button:hover, i:hover {
+  color: hsl(2deg, 65%, 91%);
+}
+
+p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.3rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+ul li {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none;
+  max-width: 2120px;
+}
+
+body {
+  position: relative;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  position: relative;
+  background-color: white;
+  z-index: 99;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+a, button, i {
+  cursor: pointer;
+}
+a:hover, button:hover, i:hover {
+  color: hsl(2deg, 65%, 91%);
+}
+
+p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.3rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+ul li {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0.7rem 2rem;
+  color: white;
+  position: fixed;
+  top: 0%;
+  z-index: 333133;
+  transition: 2s ease;
+}
+nav h1 {
+  font-size: 1.5rem;
+}
+nav a {
+  color: white;
+}
+nav .logo {
+  font-size: 1.5rem;
+  opacity: 0.5;
+  font-weight: 400;
+  cursor: pointer;
+}
+nav .logo:hover {
+  opacity: 1.5;
+}
+nav .navlinks-container .navlinks {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  padding: 0rem 1rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+nav .navlinks-container .navlinks .dropdown {
+  width: auto;
+  position: relative;
+  margin-right: 5rem;
+}
+nav .navlinks-container .navlinks .dropdown p {
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+nav .navlinks-container .navlinks .dropdown .dropdown-content {
+  width: 120%;
+  position: absolute;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+nav .navlinks-container .navlinks .dropdown .dropdown-content ul li, nav .navlinks-container .navlinks .dropdown .dropdown-content ul a {
+  font-size: 1.1rem;
+  margin: 1rem 0rem;
+}
+nav .navlinks-container .navlinks .dropdown .dropdown-content ul li:hover, nav .navlinks-container .navlinks .dropdown .dropdown-content ul a:hover {
+  color: hsl(2deg, 65%, 91%);
+}
+nav .navlinks-container .navlinks .dropdown:hover .dropdown-content {
+  top: 100%;
+  opacity: 1;
+}
+nav .navlinks-container .navlinks .sidebar-container {
+  padding: 0.5rem;
+  overflow: hidden;
+}
+nav .navlinks-container .navlinks .sidebar-container .sideBtn {
+  font-size: 2rem;
+}
+nav .navlinks-container .navlinks .sidebar-container .sideBtn:hover {
+  color: hsl(2deg, 65%, 91%);
+}
+nav .navlinks-container .navlinks .sidebar-container .sidebar-content {
+  width: 37%;
+  height: 100vh;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  padding: 1.5rem 0rem 0rem 2rem;
+  background-color: rgb(149, 140, 131);
+  position: absolute;
+  top: 0%;
+  right: -100%;
+  opacity: 0;
+  transition: 0.7s ease-in-out;
+}
+nav .navlinks-container .navlinks .sidebar-container .sidebar-content .side-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 2rem;
+}
+nav .navlinks-container .navlinks .sidebar-container .sidebar-content .side-header a {
+  color: white;
+}
+nav .navlinks-container .navlinks .sidebar-container .sidebar-content .side-header .logo {
+  margin-right: 2rem;
+}
+nav .navlinks-container .navlinks .sidebar-container .sidebar-content .side-header input[type=search] {
+  border: 1px solid rgba(240, 237, 237, 0.534);
+  padding: 0.3rem;
+  background-color: rgba(20, 20, 20, 0.247);
+}
+nav .navlinks-container .navlinks .sidebar-container .sidebar-content .sidebar-links {
+  width: 100%;
+}
+nav .navlinks-container .navlinks .sidebar-container .sidebar-content .sidebar-links .side-drop-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-right: 2rem;
+}
+nav .navlinks-container .navlinks .sidebar-container .sidebar-content .sidebar-links .side-drop-container .side-drop-link {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+nav .navlinks-container .navlinks .sidebar-container .sidebar-content .sidebar-links .side-drop-container .side-drop-link .side-link {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+nav .navlinks-container .navlinks .sidebar-container .sidebar-content .sidebar-links .side-drop-container .side-drop-link .side-link i {
+  transition: 0.3s linear;
+}
+nav .navlinks-container .navlinks .sidebar-container .sidebar-content .sidebar-links .side-drop-container .side-drop-link .side-drop-content {
+  height: 0rem;
+  transition: 0.3s linear;
+  overflow: hidden;
+}
+nav .navlinks-container .navlinks .sidebar-container .sidebar-content .sidebar-links .side-drop-container .side-drop-link .open-side-drop {
+  margin-top: 1rem;
+  height: auto;
+}
+nav .navlinks-container .navlinks .sidebar-container .sidebar-content .sidebar-links ul li {
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+}
+nav .navlinks-container .navlinks .sidebar-container .sidebar-content .social-links-container {
+  align-self: center;
+  justify-self: end;
+  position: absolute;
+  bottom: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+nav .navlinks-container .navlinks .sidebar-container .sidebar-content .social-links-container i {
+  font-size: 2rem;
+  margin: 0rem 0.5rem;
+  color: hsl(31deg, 100%, 96%);
+}
+nav .navlinks-container .navlinks .sidebar-container:hover .sidebar-content {
+  width: 35%;
+  height: 100vh;
+  right: 0%;
+  opacity: 1;
+  box-shadow: 1px 1px 62px 200vh rgba(26, 25, 25, 0.527), 1px 1px 2px rgba(0, 0, 0, 0.253);
+}
+nav .navlinks-container .navlinks .sidebar-container .sidebar-open {
+  width: 90%;
+  height: 100vh;
+  right: 60%;
+}
+
+.colored {
+  background-color: rgb(149, 140, 131);
+}
+.colored .navlinks-container .navlinks .dropdown .dropdown-content ul {
+  margin-top: 1.1rem;
+  width: 120%;
+  padding: 0.5rem;
+  background-color: rgb(149, 140, 131);
+}
+
+@media (min-width: 240px) and (max-width: 680px) {
+  nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    padding: 0.5rem;
+  }
+  nav h1 {
+    font-size: 1rem;
+  }
+  nav .logo {
+    font-size: 1.7rem;
+    opacity: 1;
+  }
+  nav .navlinks-container .navlinks .dropdown {
+    display: none;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none;
+  max-width: 2120px;
+}
+
+body {
+  position: relative;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  position: relative;
+  background-color: white;
+  z-index: 99;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+a, button, i {
+  cursor: pointer;
+}
+a:hover, button:hover, i:hover {
+  color: hsl(2deg, 65%, 91%);
+}
+
+p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.3rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+ul li {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem 0rem;
+  position: sticky;
+  bottom: 0;
+}
+footer .fsection {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  margin: 1.5rem 0rem;
+}
+footer .fsection h1 {
+  font-size: 1.5rem;
+}
+footer .fsection a {
+  color: rgba(0, 0, 0, 0.712);
+}
+footer .upper-section ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+footer .upper-section ul li:hover, footer .upper-section ul a:hover {
+  color: hsl(2deg, 65%, 91%);
+}
+footer .lower-section i {
+  pointer-events: none;
+}
+footer .lower-section ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+footer .lower-section ul li {
+  border-right: 1px solid rgba(0, 0, 0, 0.329);
+  padding: 0rem 1rem;
+}
+
+@media (min-width: 240px) and (max-width: 480px) {
+  footer .fsection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  footer .upper-section ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+}
+body {
+  color: hsl(31deg, 100%, 96%);
+}
+
+.personal-header-container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(10, 10, 10);
+  position: relative;
+  overflow: hidden;
+}
+.personal-header-container .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.personal-header-container .slide1 {
+  background: url("../images/Background/keyboardbg4.jpg") no-repeat center;
+  background-size: cover;
+  animation: fade 15s infinite ease;
+}
+.personal-header-container .slide2 {
+  background: url("../images/Background/keyboardbg5.jpg") no-repeat center;
+  background-size: cover;
+  animation: fade2 15s infinite ease;
+}
+.personal-header-container .slide3 {
+  background: url("../images/Background/keyboardbg6.jpg") no-repeat center;
+  background-size: cover;
+  animation: fade3 15s infinite ease;
+}
+.personal-header-container .arrow-btn {
+  position: absolute;
+  z-index: 99;
+  right: 2%;
+  bottom: 5%;
+}
+.personal-header-container .arrow-btn i {
+  font-size: 2.5rem;
+  color: white;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  33.333% {
+    opacity: 0;
+  }
+  66.666% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade2 {
+  0% {
+    opacity: 0;
+  }
+  33.333% {
+    opacity: 1;
+  }
+  66.666% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade3 {
+  0% {
+    opacity: 0;
+  }
+  33.333% {
+    opacity: 0;
+  }
+  66.666% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.personal-keyboards-container {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10rem 0rem;
+}
+.personal-keyboards-container h1, .personal-keyboards-container p {
+  color: hsl(31deg, 100%, 96%);
+}
+.personal-keyboards-container p {
+  width: 85ch;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+.personal-keyboards-container .personal-keyboard-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 3rem 0rem;
+  width: 80%;
+  gap: 2rem;
+}
+.personal-keyboards-container .personal-keyboard-img-container img {
+  width: 65%;
+  height: 40vh;
+  max-width: 500px;
+  object-fit: cover;
+  transition: 0.3s linear;
+}
+.personal-keyboards-container .personal-keyboard-img-container img:hover {
+  transform: scale(1.1, 1.1);
+}
+.personal-keyboards-container .personal-keyboard-img-container p {
+  text-align: start;
+  line-height: 1.5;
+}
+.personal-keyboards-container .personal-keyboard-img-container p .title {
+  font-family: "Montserrat", sans-serif;
+}
+.personal-keyboards-container .personal-keyboard-img-container p .info {
+  font-size: 0.78rem;
+  opacity: 0.8;
+  text-decoration: underline;
+}
+.personal-keyboards-container .personal-keeb2 {
+  flex-direction: row-reverse;
+}
+.personal-keyboards-container .personal-keeb2 p {
+  text-align: right;
+}
+
+.favorite-keyboard-container {
+  width: 100%;
+  background: url("../images/Background/ShinyOverlay.png") no-repeat center;
+  background-size: cover;
+  padding: 5rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.favorite-keyboard-container .favorite-keyboards-details-container {
+  width: 80%;
+  height: 100vh;
+  position: relative;
+  padding: 0rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: row;
+}
+.favorite-keyboard-container .favorite-keyboards-details-container .fav-keb-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+.favorite-keyboard-container .favorite-keyboards-details-container .fav-keb-header p {
+  opacity: 0.4;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+.favorite-keyboard-container .favorite-keyboards-details-container .fav-keb-header span {
+  width: 2px;
+  height: 1rem;
+  background-color: hsl(31deg, 100%, 96%);
+}
+.favorite-keyboard-container .favorite-keyboards-details-container .fav-keeb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin: 2rem 0rem;
+  gap: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s linear;
+}
+.favorite-keyboard-container .favorite-keyboards-details-container .fav-keeb img {
+  width: 40%;
+  height: 25rem;
+  object-fit: contain;
+}
+.favorite-keyboard-container .favorite-keyboards-details-container .fav-keeb .fav-keeb-description {
+  width: 55ch;
+  line-height: 1.5;
+}
+.favorite-keyboard-container .favorite-keyboards-details-container .fav-keeb .fav-keeb-description span {
+  font-size: 0.8rem;
+  opacity: 0.4;
+}
+.favorite-keyboard-container .favorite-keyboards-details-container .fav-keyboard2 {
+  opacity: 0;
+  z-index: -2;
+}
+.favorite-keyboard-container .favorite-keyboards-details-container .rakk-close {
+  opacity: 0;
+  z-index: -3;
+}
+.favorite-keyboard-container .favorite-keyboards-details-container .garuda-open {
+  opacity: 1;
+  z-index: 2;
+}
+
+.thock-keyboard-container {
+  background-color: black;
+  width: 100%;
+  padding: 8rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.thock-keyboard-container .thocky-keyboard-video {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5rem 0rem;
+}
+.thock-keyboard-container .thocky-keyboard-video figure {
+  height: 80vh;
+  max-height: 950px;
+  width: 90%;
+}
+.thock-keyboard-container .thocky-keyboard-video figure iframe {
+  width: 100%;
+  height: 100%;
+}
+.thock-keyboard-container .thocky-keyboard-video p {
+  width: 90ch;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+footer {
+  color: black;
+}
+
+@media (min-width: 240px) and (max-width: 480px) {
+  .personal-keyboards-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .personal-keyboards-container p {
+    width: unset;
+  }
+  .personal-keyboards-container .personal-keyboard-img-container {
+    width: 100%;
+    flex-direction: column;
+  }
+  .personal-keyboards-container .personal-keyboard-img-container img {
+    width: 90%;
+    object-fit: contain;
+  }
+  .personal-keyboards-container .personal-keyboard-img-container p {
+    text-align: center;
+  }
+  .personal-keyboards-container .personal-keyboard-img-container p .info a {
+    color: green;
+  }
+  .personal-keyboards-container .personal-keeb2 {
+    flex-direction: column;
+  }
+  .personal-keyboards-container .personal-keeb2 p {
+    text-align: center;
+  }
+  .favorite-keyboard-container {
+    text-align: center;
+  }
+  .favorite-keyboard-container .favorite-keyboards-details-container {
+    width: 100%;
+  }
+  .favorite-keyboard-container .favorite-keyboards-details-container .fav-keeb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0rem 0rem;
+    gap: 0rem;
+  }
+  .favorite-keyboard-container .favorite-keyboards-details-container .fav-keeb img {
+    width: 90%;
+    max-height: 25rem;
+    object-fit: contain;
+  }
+  .favorite-keyboard-container .favorite-keyboards-details-container .fav-keeb .fav-keeb-description {
+    width: auto;
+  }
+}

@@ -1,0 +1,320 @@
+@import  '../mixIns';
+@import  '../nav';
+@import '../footer';
+body{
+  color: $textColor;
+}
+.personal-header-container{
+    width: 100%; height: 100vh;
+    background-color: rgb(10, 10, 10);
+    position: relative;
+    overflow: hidden;
+    .slide{
+        position: absolute;
+        width: 100%; height: 100%;
+    }
+    .slide1{
+        background: url("../images/Background/keyboardbg4.jpg") no-repeat center;
+        background-size: cover;
+        animation:fade 15s infinite ease;
+      }
+      .slide2{
+        background: url("../images/Background/keyboardbg5.jpg") no-repeat center;
+        background-size: cover;
+        animation:fade2 15s infinite ease;
+      }
+      .slide3{
+        background: url("../images/Background/keyboardbg6.jpg") no-repeat center;
+        background-size: cover;
+        animation:fade3 15s infinite ease;
+      }
+      .arrow-btn{
+        position: absolute;
+        z-index: 99;
+        right: 2%;
+        bottom: 5%;
+        i{
+            font-size: 2.5rem;
+            color: white;
+        }
+      }
+}
+// animation for header section
+@keyframes fade{
+    0%{
+        opacity:1;
+      }
+    33.333% { 
+        opacity: 0;
+      }
+    66.666% {
+         opacity: 0;
+      }
+    100% {
+         opacity: 1;
+      }
+  }
+  @keyframes fade2{
+    0%   {
+        opacity:0;
+  }
+    33.333% { 
+         opacity: 1;
+      }
+    66.666% {
+         opacity: 0;
+       }
+    100% {
+         opacity: 0;
+      }
+  }
+  @keyframes fade3{
+    0% {
+        opacity:0;
+  }
+    33.333% { 
+        opacity: 0;
+  }
+    66.666% { 
+      opacity: 1; 
+  }
+    100% { 
+        opacity: 0;
+  }
+  }
+//   
+
+
+// personal keyboards section
+.personal-keyboards-container{
+    width: 100%; 
+    background-color: black;
+    @include flexBox(center,center,column);
+    padding: 10rem 0rem ;
+    h1,p{
+        color: $textColor;
+    }
+    p{
+        width: 85ch;
+        text-align: center;
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+    .personal-keyboard-img-container{
+        @include flexBox(center,center,row);
+        margin: 3rem 0rem;
+        width: 80%;
+        gap: 2rem;
+        img{
+        width: 65%; height: 40vh;
+        max-width: 500px;
+        object-fit: cover;
+        @include linkHover;
+        &:hover{  
+         transform: scale(1.1,1.1);
+        }
+    }
+    p{
+        .title{
+            font-family: 'Montserrat', sans-serif;
+        }
+        text-align: start;
+        line-height: 1.5;
+        .info{
+            font-size: .78rem;
+            opacity: .8;
+            text-decoration: underline;
+        }
+    }
+}
+.personal-keeb2{
+  flex-direction: row-reverse;
+  p{
+    text-align: right;
+  }
+}
+
+
+}
+
+// favorite keyboard section
+.favorite-keyboard-container{
+  width: 100%;
+  background: url('../images/Background/ShinyOverlay.png') no-repeat center;
+  background-size: cover;
+  padding: 5rem 0rem;
+  @include flexBox(center,center,column);
+  gap: 2rem;
+ 
+
+  // favorite-keyboards-details- section
+  .favorite-keyboards-details-container{
+    width: 80%; height: 100vh;
+    position: relative;
+    padding: 0rem 0rem;
+    @include flexBox(center,start,row);
+   .fav-keb-header{
+      @include flexBox(center,center,row);
+      gap: 1rem;
+      p{
+        opacity: .4;
+        @include linkHover;
+        cursor: pointer;
+      }
+      span{
+        width: 2px; height:  1rem;
+        background-color: $textColor;
+      }
+    }
+  
+    .fav-keeb{
+      @include flexBox(center,center,row);
+      width: 100%; 
+      margin: 2rem 0rem;
+      gap: 2rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      @include linkHover;
+      img{
+        width: 40%;
+        height: 25rem;
+        object-fit: contain;
+      }
+      .fav-keeb-description{
+        width: 55ch;
+        line-height: 1.5;
+        span{
+          font-size: .8rem;
+          opacity: .4;
+        }
+      }
+
+    }
+    .fav-keyboard2{
+      opacity: 0;
+      z-index: -2;
+    }
+
+    .rakk-close{
+      opacity: 0;
+      z-index: -3;
+    }
+    .garuda-open{
+      opacity: 1;
+      z-index: 2;
+    }
+
+
+
+
+  }
+
+
+
+}
+
+// thocky keyboard section
+.thock-keyboard-container{
+  background-color: black;
+  width: 100%; 
+  padding: 8rem 0rem;
+  @include flexBox(center,center,column);
+ 
+
+  .thocky-keyboard-video{
+    width: 100%;
+    @include flexBox(center,center,column);
+    margin: 5rem 0rem;
+    figure{
+      height: 80vh;
+      max-height: 950px;
+      width: 90%;
+      iframe{
+        width: 100%; height: 100%;
+      }
+    }
+    p{
+      width: 90ch;
+      margin-top: 2rem;
+      text-align: center;
+    }
+  }
+}
+
+footer{
+  color: black;
+}
+
+
+
+@media (min-width: 240px) and (max-width: 480px){
+  
+// personal keyboards section
+.personal-keyboards-container{
+  flex-direction: column;
+  text-align: center;
+  p{
+    width: unset;
+  }
+  .personal-keyboard-img-container{
+      width: 100%;
+      flex-direction: column;
+      img{
+      width: 90%;
+      object-fit: contain; 
+  }
+  p{
+      text-align: center;
+      .info{
+         a{
+          color: green;
+         }
+      }
+  }
+}
+.personal-keeb2{
+flex-direction: column;
+p{
+  text-align: center;
+}
+}
+
+
+}
+
+
+// favorite keyboard section
+.favorite-keyboard-container{
+  text-align: center;
+  // favorite-keyboards-details- section
+  .favorite-keyboards-details-container{
+    width: 100%; 
+
+  
+    .fav-keeb{
+      @include flexBox(center,center,column);
+      margin: 0rem 0rem;
+      gap: 0rem;
+      img{
+        width: 90%;
+        max-height: 25rem;
+        object-fit: contain;
+      }
+      .fav-keeb-description{
+        width: auto;
+      }
+
+    }
+   
+
+
+
+  }
+
+
+
+}
+
+}
